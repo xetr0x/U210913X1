@@ -45,19 +45,35 @@ namespace ACME_Cars
 
 
                     case "e":
-                       
-                        
+
+                        foreach (Car c in carperson)
+                        {
+                            Console.WriteLine($"{c.Name} {c.Age} {c.Model} {c.Exhaustpipe} {c.Price}");
+                        }
+                        Console.WriteLine("skriv nummret på bilen du vill ändra. ");
+                        int x = Convert.ToInt32(Console.ReadLine());
+                        carperson.RemoveAt(x - 1);
+                        Console.WriteLine("vad vill du ändra?, (1)namn  (2)Ålder  (3)Modell  (4)abgasrör  (5)Pris");
+                        string question = Console.ReadLine();
+                        if (question == "1")
+                        {
+                            Console.WriteLine("här kan du ändra: ");
+                            string changename = Console.ReadLine();
+                            carperson.Insert(x - 1);
+                        }
+
 
                         break;
 
 
                     case "d":
 
+
                         foreach (Car c in carperson)
                         {
                             Console.WriteLine($"{c.Name} {c.Age} {c.Model} {c.Exhaustpipe} {c.Price}");
                         }
-
+                        
                         Console.WriteLine("skriv in nummer på bilen du vill ta bort från listan");
                         int i = Convert.ToInt32(Console.ReadLine()); 
                         carperson.RemoveAt(i - 1);
@@ -92,7 +108,7 @@ namespace ACME_Cars
         
         class Car
         {
-            public string Name;
+           public string Name;
            public string Color;
            public string Model;
            public string Price;
