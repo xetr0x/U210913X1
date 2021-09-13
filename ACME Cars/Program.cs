@@ -23,7 +23,23 @@ namespace ACME_Cars
 
 
                     case "n":
-                       
+
+                        Console.WriteLine("Mata in namnet på bilen: ");
+                        string name = Console.ReadLine();
+                        Console.WriteLine("Mata in färgen på bilen: ");
+                        string color = Console.ReadLine();
+                        Console.WriteLine("Mata in ålder på din bil: ");
+                        string age = Console.ReadLine();
+                        Console.WriteLine("Mata in modell av din bil: ");
+                        string model = Console.ReadLine();
+                        Console.WriteLine("Mata in priset på din bil: ");
+                        string price = Console.ReadLine();
+                        Console.WriteLine("Mata in diametern på ditt avgasrör: ");
+                        string exhaustpipe = Console.ReadLine();
+                        
+                        
+
+
                         break;
 
 
@@ -52,6 +68,7 @@ namespace ACME_Cars
         
         class Car
         {
+            public string Name;
            public string Color;
            public string Model;
            public string Price;
