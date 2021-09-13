@@ -74,7 +74,13 @@ namespace ACME_Cars
 
                     case "s":
 
+                        foreach (Car c in carperson)
+                        {
+                            Console.WriteLine($"{c.Name} {c.Age} {c.Model} {c.Exhaustpipe} {c.Price}");
+                        }
 
+                        
+                        break; 
                 }
 
 
