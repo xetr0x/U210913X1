@@ -36,9 +36,9 @@ namespace ACME_Cars
                         string price = Console.ReadLine();
                         Console.WriteLine("Mata in diametern på ditt avgasrör: ");
                         string exhaustpipe = Console.ReadLine();
-                        
-                        
 
+                        carperson.Add(new Car() { Name = name, Color = color, Age = age, Exhaustpipe = exhaustpipe, Price = price, Model = model });
+                        Console.Clear();
 
                         break;
 
