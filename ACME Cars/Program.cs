@@ -46,17 +46,35 @@ namespace ACME_Cars
 
                     case "e":
                        
+                        
+
                         break;
 
 
                     case "d":
-                       
+
+                        foreach (Car c in carperson)
+                        {
+                            Console.WriteLine($"{c.Name} {c.Age} {c.Model} {c.Exhaustpipe} {c.Price}");
+                        }
+
+                        Console.WriteLine("skriv in nummer på bilen du vill ta bort från listan");
+                        int i = Convert.ToInt32(Console.ReadLine()); 
+                        carperson.RemoveAt(i - 1);
+                        Console.WriteLine("_______________________________________________");
+
+                        foreach (Car c in carperson)
+                        {
+                            Console.WriteLine($"{c.Name} {c.Age} {c.Model} {c.Exhaustpipe} {c.Price}");
+                        }
+                            
                         break;
+                        
 
 
                     case "s":
-                        
-                        break;
+
+
                 }
 
 
